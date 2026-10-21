@@ -1,0 +1,68 @@
+{
+    "tool": "Email Harvester & SE Pretexting Analyzer",
+    "program": "Sqrock IT Solution \u2014 Alpha 2 Cybersecurity Internship",
+    "day": 2,
+    "timestamp": "2026-10-21T11:56:48.309270",
+    "target": "C:\\Users\\PERSONAL\\Desktop\\Internship Sqrock\\day02_email_harvesting\\lab_target.html",
+    "source_type": "Local File",
+    "harvested_count": 7,
+    "emails": [
+        {
+            "index": 1,
+            "email": "billing-invoices@apexdynamics-lab.local",
+            "department": "Finance & Accounts",
+            "risk_level": "CRITICAL",
+            "threat_vector": "Business Email Compromise (BEC), Fake Vendor Invoice Fraud",
+            "attacker_pretext": "Impersonating executive/vendor demanding urgent wire transfer for overdue invoice."
+        },
+        {
+            "index": 2,
+            "email": "careers@apexdynamics-lab.local",
+            "department": "Human Resources",
+            "risk_level": "HIGH",
+            "threat_vector": "Weaponized Attachment Lures (Malicious CV / Resume)",
+            "attacker_pretext": "Job applicant emailing macro-enabled DOCX/PDF purporting to be an executive portfolio."
+        },
+        {
+            "index": 3,
+            "email": "finance.desk@apexdynamics-lab.local",
+            "department": "Finance & Accounts",
+            "risk_level": "CRITICAL",
+            "threat_vector": "Business Email Compromise (BEC), Fake Vendor Invoice Fraud",
+            "attacker_pretext": "Impersonating executive/vendor demanding urgent wire transfer for overdue invoice."
+        },
+        {
+            "index": 4,
+            "email": "hr-department@apexdynamics-lab.local",
+            "department": "Human Resources",
+            "risk_level": "HIGH",
+            "threat_vector": "Weaponized Attachment Lures (Malicious CV / Resume)",
+            "attacker_pretext": "Job applicant emailing macro-enabled DOCX/PDF purporting to be an executive portfolio."
+        },
+        {
+            "index": 5,
+            "email": "info@apexdynamics-lab.local",
+            "department": "General / Inquiries",
+            "risk_level": "MEDIUM",
+            "threat_vector": "Organizational Fingerprinting & Phishing Pivot",
+            "attacker_pretext": "General inquiries designed to map out active internal employee names and hierarchy."
+        },
+        {
+            "index": 6,
+            "email": "it-support@apexdynamics-lab.local",
+            "department": "IT Operations",
+            "risk_level": "CRITICAL",
+            "threat_vector": "Credential Harvesting & Fake Maintenance Portals",
+            "attacker_pretext": "Fake notification alerting user of mandatory MFA update or password expiration."
+        },
+        {
+            "index": 7,
+            "email": "security-ops@apexdynamics-lab.local",
+            "department": "IT Operations",
+            "risk_level": "CRITICAL",
+            "threat_vector": "Credential Harvesting & Fake Maintenance Portals",
+            "attacker_pretext": "Fake notification alerting user of mandatory MFA update or password expiration."
+        }
+    ],
+    "risk_breakdown": {}
+}
