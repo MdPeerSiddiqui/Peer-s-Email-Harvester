@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 r"""
 ================================================================================
+  _____  ______ ______ _____  _  _____ 
+ |  __ \|  ____|  ____|  __ \(_)/ ____|
+ | |__) | |__  | |__  | |__) |_| (___  
+ |  ___/|  __| |  __| |  _  /   \___ \ 
+ | |    | |____| |____| | \ \   ____) |
+ |_|    |______|______|_|  \_\ |_____/ 
   ______ __  __          _____ _        _    _                               _            
  |  ____|  \/  |   /\   |_   _| |      | |  | |                             | |           
  | |__  | \  / |  /  \    | | | |      | |__| | __ _ _ ____   _____  ___ ___| |_ ___ _ __ 
@@ -8,7 +14,7 @@ r"""
  | |____| |  | |/ ____ \ _| |_| |____  | |  | | (_| | |   \ V /  __/\__ \__ \ ||  __/ |   
  |______|_|  |_/_/    \_\_____|______| |_|  |_|\__,_|_|    \_/ \___||___/___/\__\___|_|   
                                                                                           
-  ⚡ EMAIL HARVESTING & SOCIAL ENGINEERING PREP TOOL — Day 02 ⚡
+  ⚡ PEER'S EMAIL HARVESTER & SE PRETEXTING ANALYZER — Day 02 ⚡
   Developed under Sqrock IT Solution — Alpha 2 Cybersecurity Internship
 ================================================================================
 """
@@ -54,6 +60,12 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
         pass
 
 BANNER = rf"""{C_CYAN}{C_BRIGHT}
+  _____  ______ ______ _____  _  _____ 
+ |  __ \|  ____|  ____|  __ \(_)/ ____|
+ | |__) | |__  | |__  | |__) |_| (___  
+ |  ___/|  __| |  __| |  _  /   \___ \ 
+ | |    | |____| |____| | \ \   ____) |
+ |_|    |______|______|_|  \_\ |_____/ 
   ______ __  __          _____ _        _    _                               _            
  |  ____|  \/  |   /\   |_   _| |      | |  | |                             | |           
  | |__  | \  / |  /  \    | | | |      | |__| | __ _ _ ____   _____  ___ ___| |_ ___ _ __ 
@@ -61,7 +73,7 @@ BANNER = rf"""{C_CYAN}{C_BRIGHT}
  | |____| |  | |/ ____ \ _| |_| |____  | |  | | (_| | |   \ V /  __/\__ \__ \ ||  __/ |   
  |______|_|  |_/_/    \_\_____|______| |_|  |_|\__,_|_|    \_/ \___||___/___/\__\___|_|   
 {C_RESET}
-{C_YELLOW}{C_BRIGHT} ⚡ EMAIL HARVESTER & SE PRETEXTING ANALYZER v1.0 ⚡{C_RESET}
+{C_YELLOW}{C_BRIGHT} ⚡ PEER'S EMAIL HARVESTER & SE PRETEXTING ANALYZER v1.0 ⚡{C_RESET}
 {C_WHITE}{C_DIM} [★] Developed for Sqrock IT Solution | Alpha 2 Cybersecurity Internship (Day 02){C_RESET}
 {C_CYAN}{"=" * 80}{C_RESET}
 """
@@ -131,7 +143,7 @@ def harvest_from_target(target_path_or_url: str) -> dict:
     """Fetch content from HTTP URL or local HTML file and extract emails."""
     scan_time = datetime.now()
     report = {
-        "tool": "Email Harvester & SE Pretexting Analyzer",
+        "tool": "PEER'S Email Harvester & SE Pretexting Analyzer",
         "program": "Sqrock IT Solution — Alpha 2 Cybersecurity Internship",
         "day": 2,
         "timestamp": scan_time.isoformat(),
@@ -208,9 +220,10 @@ def harvest_from_target(target_path_or_url: str) -> dict:
     print(f"{C_CYAN}{'=' * 80}{C_RESET}")
 
     # Output saving
-    os.makedirs("reports", exist_ok=True)
+    reports_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "reports")
+    os.makedirs(reports_dir, exist_ok=True)
     clean_target_name = re.sub(r"[^a-zA-Z0-9.-]", "_", os.path.basename(target_path_or_url) or "target")
-    output_json = os.path.join("reports", f"day02_harvested_{clean_target_name}.json")
+    output_json = os.path.join(reports_dir, f"day02_harvested_{clean_target_name}.json")
     with open(output_json, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=4)
     print(f"\n{C_WHITE}[★] Structured JSON Deliverable Saved : {C_GREEN}{output_json}{C_RESET}")
@@ -221,7 +234,7 @@ def harvest_from_target(target_path_or_url: str) -> dict:
 def main():
     print(BANNER)
     parser = argparse.ArgumentParser(
-        description="Day 02 Email Harvester & SE Pretexting Tool (Sqrock IT Solution Internship)"
+        description="PEER'S Email Harvester & SE Pretexting Tool (Sqrock IT Solution Internship)"
     )
     parser.add_argument(
         "target",
